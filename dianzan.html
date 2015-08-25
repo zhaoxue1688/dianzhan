@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>csser</title>
+		<style>
+			.fave {
+				  width: 70px;
+				  height: 50px;
+				  background: url(twitter_fave.png) no-repeat;
+				  background-position: 0 0;
+			}
+			.fave:hover {
+				  background-position: -3519px 0;
+				  transition: background 1s steps(55);
+			}
+			.zhover {
+				  background-position: -3519px 0;
+				  transition: background 1s steps(55);
+			}
+		</style>
+	</head>
+	<body>
+		<section class="fave"></section>
+		<script type="text/javascript"src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+			$(function(){
+				var resCode = 1;
+				$(".fave").click(function(){
+					if (resCode == 1) {
+						$(".fave").addClass("zhover");
+                	}else{
+					  	$(".fave").removeClass("zhover");
+					}
+				});
+			})
+		</script>
+	</body>
+</html>
